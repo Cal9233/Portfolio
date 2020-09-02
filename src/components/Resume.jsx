@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles } from "@material-ui/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import { Typography, Box } from "@material-ui/core";
 import Navbar from "./Navbar";
 
@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("md")]: {
       padding: "2rem",
       "&:before": {
-        left: "calc(50%-1px)",
+        left: "calc(50% - 1px)",
         right: "auto",
       },
     },
@@ -35,6 +35,26 @@ const useStyles = makeStyles((theme) => ({
   timeLineYear: {
     textAlign: "center",
     maxWidth: "9.375rem",
+    margin: "0 3rem 0 auto",
+    fontSize: "1.8rem",
+    background: "tomato",
+    color: "white",
+    lineHeight: 1,
+    padding: "0.5rem 0 1rem",
+    "&:before": {
+      display: "none",
+    },
+    [theme.breakpoints.up("md")]: {
+      textAlign: "center",
+      margin: "0 auto",
+      "&:nth-of-type(2n)": {
+        float: "none",
+        margin: "0 auto",
+      },
+      "&:nth-of-type(2n):before": {
+        display: "none",
+      },
+    },
   },
 }));
 
@@ -49,7 +69,9 @@ const Resume = () => {
         </Typography>
       </Box>
       <Box component="div" className={classes.timeLine}>
-        <Typography varient="h2">2020</Typography>
+        <Typography varient="h2" className={classes.timeLineYear}>
+          2020
+        </Typography>
       </Box>
     </>
   );
