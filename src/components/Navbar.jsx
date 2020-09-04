@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import MobileRightMenuSlider from "@material-ui/core/Drawer";
+import ToolBar from "@material-ui/core/ToolBar";
 import {
   AppBar,
   ListItem,
@@ -8,7 +10,6 @@ import {
   IconButton,
   ListItemText,
   Avatar,
-  ToolBar,
   Divider,
   List,
   Typography,
@@ -21,12 +22,13 @@ import {
   Apps,
   ContactMail,
 } from "@material-ui/icons";
-import me from "../me.png";
+import me from "../image/me.png";
+import Footer from "./Footer";
 
 //CSS
 const useStyles = makeStyles((theme) => ({
   menuSliderContainer: {
-    width: 250,
+    width: 150,
     background: "#511",
     height: "100%",
   },
@@ -45,18 +47,22 @@ const menuIcons = [
   {
     listIcon: <Home />,
     listText: "Home",
+    listPath: "/",
   },
   {
     listIcon: <AssignmentInd />,
     listText: "Resume",
+    listPath: "/resume",
   },
   {
-    listIcon: <App />,
+    listIcon: <Apps />,
     listText: "Portfolio",
+    listPath: "/portfolio",
   },
   {
     listIcon: <ContactMail />,
     listText: "Contacts",
+    listPath: "/contact",
   },
 ];
 
@@ -80,8 +86,8 @@ const Navbar = () => {
       <Avatar className={classes.avatar} src={me} alt="Cal" />
       <Divider />
       <List>
-        {menuItems.map((lsItem, key) => (
-          <ListItem button key={key}>
+        {menuIcons.map((lsItem, key) => (
+          <ListItem button key={key} component={Link} to={lsItem.listPath}>
             <ListItemIcon className={classes.listItem}>
               {lsItem.listIcon}
             </ListItemIcon>
@@ -111,6 +117,7 @@ const Navbar = () => {
               onClose={toggleSlider("right", false)}
             >
               {sideList("right")}
+              <Footer />
             </MobileRightMenuSlider>
           </ToolBar>
         </AppBar>
