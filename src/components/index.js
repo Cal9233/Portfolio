@@ -31,7 +31,6 @@ const Home = () => {
               type: "circle",
               stroke: {
                 width: 1,
-                color: "tomato",
               },
             },
             size: {
@@ -40,7 +39,7 @@ const Home = () => {
               anim: {
                 enable: true,
                 speed: 8,
-                size_min: 0.1,
+                size_min: 2,
                 sync: true,
               },
             },
@@ -50,7 +49,7 @@ const Home = () => {
               anim: {
                 enable: true,
                 speed: 1,
-                opacity_min: 0.1,
+                opacity_min: 2,
                 sync: true,
               },
             },

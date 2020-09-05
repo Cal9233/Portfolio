@@ -29,14 +29,14 @@ import Footer from "./Footer";
 const useStyles = makeStyles((theme) => ({
   menuSliderContainer: {
     width: 150,
-    background: "#511",
+    background: "#222",
     height: "100%",
   },
-  me: {
+  avatar: {
     display: "block",
     margin: "0.5rem auto",
-    width: theme.spacing(13),
-    height: theme.spacing(13),
+    width: theme.spacing(10),
+    height: theme.spacing(10),
   },
   listItem: {
     color: "tan",
@@ -106,7 +106,7 @@ const Navbar = () => {
         <AppBar position="static" style={{ background: "#222" }}>
           <ToolBar>
             <IconButton onClick={toggleSlider("right", true)}>
-              <ArrowBack style={{ background: "tomato" }} />
+              <ArrowBack style={{ background: "#B8B8B8" }} />
             </IconButton>
             <Typography variant="h5" style={{ color: "tan" }}>
               Portfolio
