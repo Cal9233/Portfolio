@@ -8,20 +8,20 @@ const useStyles = makeStyles((theme) => ({
   form: {
     top: "50%",
     left: "50%",
-    trnasform: "translate(-50%, -50%)",
+    transform: "translate(-50%, -50%)",
     position: "absolute",
   },
   button: {
     marginTop: "1rem",
-    color: "tomato",
-    borderColor: "tomato",
+    color: "tan",
+    borderColor: "tan",
   },
 }));
 
 const InputField = withStyles({
   root: {
     "& label.Mui-focused": {
-      color: "tomato",
+      color: "tan",
     },
     "& label": {
       color: "tan",
@@ -49,14 +49,14 @@ const Contact = () => {
       <Grid container justify="center">
         <Box component="form" className={classes.form}>
           <Typography
-            variant="h5"
+            variant="h2"
             style={{
-              color: "tomato",
+              color: "tan",
               textAlign: "center",
               textTransform: "uppercase",
             }}
           >
-            Hire or Contact me!
+            Contact me!
           </Typography>
           <InputField
             fullWidth={true}

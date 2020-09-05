@@ -7,23 +7,26 @@ import me from "../image/me.png";
 //CSS
 const useStyles = makeStyles((theme) => ({
   me: {
-    width: theme.spacing(15),
-    height: theme.spacing(15),
+    width: theme.spacing(60),
+    height: theme.spacing(60),
     margin: theme.spacing(1),
-    left: "50%",
+    left: theme.spacing(80),
+    // top: theme.spacing(5),
   },
   title: {
-    color: "tomato",
+    color: "#BCD7DD",
   },
   subtitles: {
-    color: "tan",
+    color: "#BCD7DD",
     marginBottom: "3rem",
+  },
+  aboutMe: {
+    color: "#BCD7DD",
   },
   typedContainer: {
     position: "absolute",
-    top: "50%",
+    // top: "50%",
     left: "50",
-    // transform: "translate(-50%, -50%)",
     width: "100vw",
     textAlign: "center",
     zIndex: 1,
@@ -37,13 +40,28 @@ const Header = () => {
       <Grid container justified="center">
         <Avatar className={classes.me} src={me} alt="Cal" />
       </Grid>
-      <Typography className={classes.title} variant="h4">
-        <Typed stings={["Calvin Malagon"]} typeSpeed={40} />
+      <Typography className={classes.title} variant="h3">
+        <Typed strings={["Calvin Malagon"]} typeSpeed={40} />
+      </Typography>
+      <br />
+      <Typography className={classes.aboutMe} variant="h4">
+        <Typed
+          strings={[
+            "Cal is a creative and motivated web developer who is ready to roll up his sleeves and solve any problem in front of him.  He is a strong communicator and took lead as project manager and front end/back end developer on his final project, a MERN app that helps users monitor their productivity. Prior to Wyncode he was working in the medical field as PT intern and holds a BA degree in Gradual Studies from University of Central Florida.",
+          ]}
+          typeSpeed={3}
+        />
       </Typography>
       <br />
       <Typography className={classes.subtitles} variant="h5">
         <Typed
-          strings={["Web Deaa", "Web Developer", "Full Stack"]}
+          strings={[
+            "Javascript",
+            "React",
+            "Mern Stack",
+            "Passport",
+            "HTML/CSS",
+          ]}
           typeSpeed={40}
           backSpeed={60}
           loop
