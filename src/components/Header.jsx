@@ -1,17 +1,15 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Typography, Avatar, Grid, Box } from "@material-ui/core";
+import { Typography, Avatar, Grid, Box, Paper } from "@material-ui/core";
 import Typed from "react-typed";
 import me from "../image/me.png";
 
-//CSS
 const useStyles = makeStyles((theme) => ({
   me: {
     width: theme.spacing(60),
     height: theme.spacing(60),
     margin: theme.spacing(1),
     left: theme.spacing(80),
-    // top: theme.spacing(5),
   },
   title: {
     color: "#BCD7DD",
@@ -25,7 +23,6 @@ const useStyles = makeStyles((theme) => ({
   },
   typedContainer: {
     position: "absolute",
-    // top: "50%",
     left: "50",
     width: "100vw",
     textAlign: "center",
@@ -47,7 +44,7 @@ const Header = () => {
       <Typography className={classes.aboutMe} variant="h4">
         <Typed
           strings={[
-            "Cal is a creative and motivated web developer who is ready to roll up his sleeves and solve any problem in front of him.  He is a strong communicator and took lead as project manager and front end/back end developer on his final project, a MERN app that helps users monitor their productivity. Prior to Wyncode he was working in the medical field as PT intern and holds a BA degree in Gradual Studies from University of Central Florida.",
+            "Cal is a creative and motivated web developer who is ready to roll up his sleeves and solve any problem in front of him.  He is a strong communicator and took lead as project manager and full-stack developer on multiple projects. Prior to Wyncode he was working in the medical field as PT intern and holds a BA degree in Gradual Studies from University of Central Florida.",
           ]}
           typeSpeed={3}
         />
@@ -58,9 +55,14 @@ const Header = () => {
           strings={[
             "Javascript",
             "React",
-            "Mern Stack",
+            "MongoDB",
+            "Bootstrap",
+            "Material-UI",
+            "Node.js",
+            "Express",
+            "CSS",
             "Passport",
-            "HTML/CSS",
+            "HTML",
           ]}
           typeSpeed={40}
           backSpeed={60}
