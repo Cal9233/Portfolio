@@ -5,6 +5,7 @@ import "./App.css";
 import Home from "./components/index";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
+// import Resume from "./components/Resume";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Route exact path="/" component={Home} />
       <Route path="/portfolio" component={Portfolio} />
       <Route path="/contact" component={Contact} />
+      {/* <Route path="/resume" component={Resume} /> */}
     </>
   );
 }
