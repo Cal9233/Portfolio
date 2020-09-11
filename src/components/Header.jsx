@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Typography, Avatar, Grid, Box, Paper } from "@material-ui/core";
+import { Typography, Avatar, Grid, Box } from "@material-ui/core";
 import Typed from "react-typed";
 import me from "../image/me.png";
 
@@ -17,9 +17,6 @@ const useStyles = makeStyles((theme) => ({
   subtitles: {
     color: "#BCD7DD",
     marginBottom: "3rem",
-  },
-  aboutMe: {
-    color: "#BCD7DD",
   },
   typedContainer: {
     position: "absolute",
@@ -39,15 +36,6 @@ const Header = () => {
       </Grid>
       <Typography className={classes.title} variant="h3">
         <Typed strings={["Calvin Malagon"]} typeSpeed={40} />
-      </Typography>
-      <br />
-      <Typography className={classes.aboutMe} variant="h4">
-        <Typed
-          strings={[
-            "Cal is a creative and motivated web developer who is ready to roll up his sleeves and solve any problem in front of him.  He is a strong communicator and took lead as project manager and full-stack developer on multiple projects. Prior to Wyncode he was working in the medical field as PT intern and holds a BA degree in Gradual Studies from University of Central Florida.",
-          ]}
-          typeSpeed={3}
-        />
       </Typography>
       <br />
       <Typography className={classes.subtitles} variant="h5">

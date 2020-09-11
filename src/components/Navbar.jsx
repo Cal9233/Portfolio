@@ -105,7 +105,7 @@ const Navbar = () => {
       <Box component="nav">
         <AppBar position="static" style={{ background: "#222" }}>
           <ToolBar>
-            <IconButton onClick={toggleSlider("right", true)}>
+            <IconButton onClick={toggleSlider("left", true)}>
               <ArrowBack style={{ background: "#B8B8B8" }} />
             </IconButton>
             <Typography variant="h5" style={{ color: "tan" }}>

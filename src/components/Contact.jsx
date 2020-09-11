@@ -3,7 +3,6 @@ import { makeStyles, withStyles } from "@material-ui/core/styles";
 import { TextField, Typography, Button, Grid, Box } from "@material-ui/core";
 import SendIcon from "@material-ui/icons/Send";
 import Navbar from "./Navbar";
-import message from "../image/message.png";
 
 const useStyles = makeStyles((theme) => ({
   form: {
@@ -21,6 +20,12 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "1rem",
     color: "tan",
     borderColor: "tan",
+  },
+  aboutMe: {
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    position: "absolute",
   },
 }));
 
@@ -60,6 +65,30 @@ const Contact = () => {
           action="/contact"
           name="contact"
         >
+          <Typography
+            variant="h2"
+            style={{
+              color: "tan",
+              textAlign: "center",
+              textTransform: "uppercase",
+            }}
+          >
+            About me
+          </Typography>
+          <Typography
+            variant="h5"
+            style={{
+              color: "tan",
+              textAlign: "center",
+            }}
+          >
+            Cal is a creative and motivated web developer who is ready to roll
+            up his sleeves and solve any problem in front of him. He is a strong
+            communicator and took lead as project manager and full-stack
+            developer on multiple projects. Prior to Wyncode he was working in
+            the medical field as PT intern and holds a BA degree in Gradual
+            Studies from University of Central Florida.
+          </Typography>
           <Typography
             variant="h2"
             style={{
