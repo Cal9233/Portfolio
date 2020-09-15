@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     top: 100,
   },
   subtitles: {
-    color: "#BCD7DD",
+    color: "#FFD300",
     marginBottom: "3rem",
   },
   typedContainer: {

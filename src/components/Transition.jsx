@@ -8,7 +8,7 @@ const Transition = () => {
     enter: { opacity: 1 },
     leave: { opacity: 0 },
   });
-
+  useEffect(() => void setInterval(() => set((state) => state + 1), 2000), []);
   return transitions.map(
     ({ item, key, props }) =>
       item && (
