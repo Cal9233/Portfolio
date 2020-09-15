@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "./Navbar";
-import Header from "./Header";
+import Navbar from "../components/Navbar";
+import Header from "../components/Header";
 import Particles from "react-particles-js";
 import { makeStyles } from "@material-ui/core/styles";
 

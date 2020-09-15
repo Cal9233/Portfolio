@@ -13,7 +13,7 @@ const useStyles = makeStyles({
     "& .MuiSvgIcon-root": {
       fill: "tan",
       "&:hover": {
-        fill: "#BCD7DD",
+        fill: "#FFD300",
         fontSize: "1.8rem",
       },
     },
@@ -24,8 +24,18 @@ const Footer = () => {
   const classes = useStyles();
   return (
     <BottomNavigation width="auto" style={{ background: "#222" }}>
-      <BottomNavigationAction style={{ padding: 0 }} icon={<GitHub />} />
-      <BottomNavigationAction style={{ padding: 0 }} icon={<LinkedIn />} />
+      <BottomNavigationAction
+        className={classes.root}
+        style={{ padding: 0 }}
+        href="https://github.com/Cal9233"
+        icon={<GitHub />}
+      />
+      <BottomNavigationAction
+        className={classes.root}
+        style={{ padding: 0 }}
+        href="https://www.linkedin.com/in/calmalagon/"
+        icon={<LinkedIn />}
+      />
     </BottomNavigation>
   );
 };
