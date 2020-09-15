@@ -15,13 +15,8 @@ import {
   Typography,
   Box,
 } from "@material-ui/core";
-import {
-  ArrowBack,
-  AssignmentInd,
-  Home,
-  Apps,
-  ContactMail,
-} from "@material-ui/icons";
+import { AssignmentInd, Home, Apps, ContactMail } from "@material-ui/icons";
+import CodeIcon from "@material-ui/icons/Code";
 import me from "../image/me.png";
 import Footer from "./Footer";
 
@@ -31,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
     width: 150,
     background: "#222",
     height: "100%",
+    width: "100%",
   },
   avatar: {
     display: "block",
@@ -39,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     height: theme.spacing(10),
   },
   listItem: {
-    color: "tan",
+    color: "#FFD300",
   },
 }));
 
@@ -56,8 +52,8 @@ const menuIcons = [
   },
   {
     listIcon: <Apps />,
-    listText: "Portfolio",
-    listPath: "/portfolio",
+    listText: "Project",
+    listPath: "/project",
   },
   {
     listIcon: <ContactMail />,
@@ -106,17 +102,17 @@ const Navbar = () => {
         <AppBar position="static" style={{ background: "#222" }}>
           <ToolBar>
             <IconButton onClick={toggleSlider("left", true)}>
-              <ArrowBack style={{ background: "#B8B8B8" }} />
+              <CodeIcon style={{ background: "#FFD300" }} />
             </IconButton>
-            <Typography variant="h5" style={{ color: "tan" }}>
+            <Typography variant="h5" style={{ color: "#FFD300" }}>
               Portfolio
             </Typography>
             <MobileRightMenuSlider
-              anchor="right"
-              open={state.right}
-              onClose={toggleSlider("right", false)}
+              anchor="left"
+              open={state.left}
+              onClose={toggleSlider("left", false)}
             >
-              {sideList("right")}
+              {sideList("left")}
               <Footer />
             </MobileRightMenuSlider>
           </ToolBar>

@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography, Avatar, Grid, Box } from "@material-ui/core";
 import Typed from "react-typed";
+import Transition from "./Transition";
 import me from "../image/me.png";
 
 const useStyles = makeStyles((theme) => ({
@@ -10,9 +11,13 @@ const useStyles = makeStyles((theme) => ({
     height: theme.spacing(60),
     margin: theme.spacing(1),
     left: theme.spacing(80),
+    top: theme.spacing(10),
   },
   title: {
-    color: "#BCD7DD",
+    color: "#FFD300",
+    position: "relative",
+    minHeight: "150px",
+    top: 100,
   },
   subtitles: {
     color: "#BCD7DD",
@@ -20,7 +25,6 @@ const useStyles = makeStyles((theme) => ({
   },
   typedContainer: {
     position: "absolute",
-    left: "50",
     width: "100vw",
     textAlign: "center",
     zIndex: 1,
@@ -29,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Header = () => {
   const classes = useStyles();
+
   return (
     <Box className={classes.typedContainer}>
       <Grid container justified="center">
@@ -39,23 +44,7 @@ const Header = () => {
       </Typography>
       <br />
       <Typography className={classes.subtitles} variant="h5">
-        <Typed
-          strings={[
-            "Javascript",
-            "React",
-            "MongoDB",
-            "Bootstrap",
-            "Material-UI",
-            "Node.js",
-            "Express",
-            "CSS",
-            "Passport",
-            "HTML",
-          ]}
-          typeSpeed={40}
-          backSpeed={60}
-          loop
-        />
+        <Transition />
       </Typography>
     </Box>
   );

@@ -11,21 +11,23 @@ import {
   Typography,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import Navbar from "./Navbar";
+import Navbar from "../components/Navbar";
 import project1 from "../image/GotTech.png";
 import project2 from "../image/Corona.jpg";
 import project3 from "../image/WynIt.png";
 
 const useStyles = makeStyles({
   mainContainer: {
-    background: "#233",
-    height: "100%",
+    background: "tan",
+    margin: 0,
+    padding: 0,
   },
   cardContainer: {
     maxWidth: 445,
     maxHeight: 445,
     margin: "3rem",
     margin: "5rem auto",
+    background: "#141000",
   },
 });
 
@@ -45,7 +47,7 @@ const Portfolio = () => {
                 image={project1}
               />
               <CardContent>
-                <Typography gutterBottom variant="h5">
+                <Typography gutterBottom variant="h5" style={{ color: "tan" }}>
                   Got Tech?
                 </Typography>
                 <Typography
@@ -53,6 +55,7 @@ const Portfolio = () => {
                   variant="body2"
                   color="textSecondary"
                   component="p"
+                  style={{ color: "tan" }}
                 >
                   This is a Job Search engine focusing on SoftWare Development,
                   to facilitate the use of a Job Search website without clutter,
@@ -61,10 +64,15 @@ const Portfolio = () => {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button size="small" color="primary">
-                Share
+              <Button
+                size="small"
+                color="primary"
+                style={{ color: "tan" }}
+                href="https://github.com/Cal9233/GotTech"
+              >
+                Github
               </Button>
-              <Button size="small" color="primary">
+              <Button size="small" color="primary" style={{ color: "tan" }}>
                 Live Demo
               </Button>
             </CardActions>
@@ -80,7 +88,7 @@ const Portfolio = () => {
                 image={project2}
               />
               <CardContent>
-                <Typography gutterBottom variant="h5">
+                <Typography gutterBottom variant="h5" style={{ color: "tan" }}>
                   COVID-19
                 </Typography>
                 <Typography
@@ -88,6 +96,7 @@ const Portfolio = () => {
                   variant="body2"
                   color="textSecondary"
                   component="p"
+                  style={{ color: "tan" }}
                 >
                   An API frontend displaying global COVID-19 cases. Using
                   Chart.js, React/JS and data from REST API.
@@ -95,10 +104,15 @@ const Portfolio = () => {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button size="small" color="primary">
-                Share
+              <Button
+                size="small"
+                color="primary"
+                style={{ color: "tan" }}
+                href="https://github.com/Cal9233/COVID-19"
+              >
+                Github
               </Button>
-              <Button size="small" color="primary">
+              <Button size="small" color="primary" style={{ color: "tan" }}>
                 Live Demo
               </Button>
             </CardActions>
@@ -114,7 +128,7 @@ const Portfolio = () => {
                 image={project3}
               />
               <CardContent>
-                <Typography gutterBottom variant="h5">
+                <Typography gutterBottom variant="h5" style={{ color: "tan" }}>
                   WynIt
                 </Typography>
                 <Typography
@@ -122,17 +136,28 @@ const Portfolio = () => {
                   variant="body2"
                   color="textSecondary"
                   component="p"
+                  style={{ color: "tan" }}
                 >
                   A productivity app created to make most of your time
-                  profficient.
+                  proficient.
                 </Typography>
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button size="small" color="primary">
-                Share
+              <Button
+                size="small"
+                color="primary"
+                style={{ color: "tan" }}
+                href="https://github.com/Cal9233/Timer-app"
+              >
+                Github
               </Button>
-              <Button size="small" color="primary">
+              <Button
+                size="small"
+                color="primary"
+                style={{ color: "tan" }}
+                href="http://secret-retreat-95639.herokuapp.com/"
+              >
                 Live Demo
               </Button>
             </CardActions>
@@ -141,14 +166,9 @@ const Portfolio = () => {
         <Grid item xs={12} sm={8} md={6}>
           <Card className={classes.cardContainer}>
             <CardActionArea>
-              <CardMedia
-                component="img"
-                alt="Project 4"
-                height="140"
-                // image={project2}
-              />
+              <CardMedia component="img" alt="Project 4" height="140" />
               <CardContent>
-                <Typography gutterBottom variant="h5">
+                <Typography gutterBottom variant="h5" style={{ color: "tan" }}>
                   Scrumy
                 </Typography>
                 <Typography
@@ -156,6 +176,7 @@ const Portfolio = () => {
                   variant="body2"
                   color="textSecondary"
                   component="p"
+                  style={{ color: "tan" }}
                 >
                   Possible Web App created for team management allowing access
                   to versitile
@@ -163,10 +184,10 @@ const Portfolio = () => {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button size="small" color="primary">
-                Share
+              <Button size="small" color="primary" style={{ color: "tan" }}>
+                Github
               </Button>
-              <Button size="small" color="primary">
+              <Button size="small" color="primary" style={{ color: "tan" }}>
                 Live Demo
               </Button>
             </CardActions>

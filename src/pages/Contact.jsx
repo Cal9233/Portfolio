@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import { TextField, Typography, Button, Grid, Box } from "@material-ui/core";
 import SendIcon from "@material-ui/icons/Send";
-import Navbar from "./Navbar";
+import Navbar from "../components/Navbar";
 
 const useStyles = makeStyles((theme) => ({
   form: {
@@ -18,8 +18,8 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     marginTop: "1rem",
-    color: "tan",
-    borderColor: "tan",
+    color: "#ffd300",
+    borderColor: "#ffd300",
   },
   aboutMe: {
     top: "50%",
@@ -27,25 +27,26 @@ const useStyles = makeStyles((theme) => ({
     transform: "translate(-50%, -50%)",
     position: "absolute",
   },
+  fade: {},
 }));
 
 const InputField = withStyles({
   root: {
     "& label.Mui-focused": {
-      color: "tan",
+      color: "#ffd300",
     },
     "& label": {
-      color: "tan",
+      color: "#ffd300",
     },
     "& .MuiOutlinedInput-root": {
       "& fieldset": {
-        borderColor: "tan",
+        borderColor: "#ffd300",
       },
       "&:hover fieldset": {
-        borderColor: "tan",
+        borderColor: "#ffd300",
       },
       "& .Mui-focused field": {
-        borderColor: "tan",
+        borderColor: "#ffd300",
       },
     },
   },
@@ -55,9 +56,9 @@ const Contact = () => {
   const classes = useStyles();
 
   return (
-    <Box component="div" className={classes.message}>
+    <Box component="div" style={{ background: "#141000", height: "100vh" }}>
       <Navbar />
-      <Grid container justify="center">
+      <Grid container justify="center" className={classes.message}>
         <Box
           component="form"
           className={classes.form}
@@ -68,20 +69,14 @@ const Contact = () => {
           <Typography
             variant="h2"
             style={{
-              color: "tan",
+              color: "#ffd300",
               textAlign: "center",
               textTransform: "uppercase",
             }}
           >
             About me
           </Typography>
-          <Typography
-            variant="h5"
-            style={{
-              color: "tan",
-              textAlign: "center",
-            }}
-          >
+          <Typography variant="h5" style={{ color: "#ffd300" }}>
             Cal is a creative and motivated web developer who is ready to roll
             up his sleeves and solve any problem in front of him. He is a strong
             communicator and took lead as project manager and full-stack
@@ -89,10 +84,14 @@ const Contact = () => {
             the medical field as PT intern and holds a BA degree in Gradual
             Studies from University of Central Florida.
           </Typography>
+          <br />
+          <br />
+          <br />
+          <br />
           <Typography
             variant="h2"
             style={{
-              color: "tan",
+              color: "#ffd300",
               textAlign: "center",
               textTransform: "uppercase",
             }}
@@ -105,7 +104,7 @@ const Contact = () => {
             required
             label="Name"
             variant="outlined"
-            inputProps={{ style: { color: "white" } }}
+            inputProps={{ style: { color: "#ffd300" } }}
             margin="dense"
             size="medium"
           />
@@ -115,7 +114,7 @@ const Contact = () => {
             requred
             label="Email"
             variant="outlined"
-            inputProps={{ style: { color: "white" } }}
+            inputProps={{ style: { color: "#ffd300" } }}
             margin="dense"
             size="medium"
           />
@@ -125,7 +124,7 @@ const Contact = () => {
             required
             label="Company Name"
             variant="outlined"
-            inputProps={{ style: { color: "white" } }}
+            inputProps={{ style: { color: "#ffd300" } }}
             margin="dense"
             size="medium"
           />
@@ -135,9 +134,12 @@ const Contact = () => {
             required
             label="Message"
             variant="outlined"
-            inputProps={{ style: { color: "white" } }}
+            inputProps={{ style: { color: "#ffd300" } }}
             margin="dense"
-            size="large"
+            size="medium"
+            multiline
+            rows={8}
+            rowsMax={10}
           />
           <br />
           <Button
