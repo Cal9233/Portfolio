@@ -19,6 +19,7 @@ import project3 from "../image/WynIt.png";
 const useStyles = makeStyles({
   mainContainer: {
     background: "tan",
+    height: "100%",
     margin: 0,
     padding: 0,
   },
