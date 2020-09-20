@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import MobileRightMenuSlider from "@material-ui/core/Drawer";
-import ToolBar from "@material-ui/core/ToolBar";
 import {
   AppBar,
   ListItem,
@@ -14,6 +13,7 @@ import {
   List,
   Typography,
   Box,
+  Toolbar,
 } from "@material-ui/core";
 import { AssignmentInd, Home, Apps, ContactMail } from "@material-ui/icons";
 import CodeIcon from "@material-ui/icons/Code";
@@ -100,7 +100,7 @@ const Navbar = () => {
     <>
       <Box component="nav">
         <AppBar position="static" style={{ background: "#222" }}>
-          <ToolBar>
+          <Toolbar>
             <IconButton onClick={toggleSlider("left", true)}>
               <CodeIcon style={{ background: "#FFD300" }} />
             </IconButton>
@@ -115,7 +115,7 @@ const Navbar = () => {
               {sideList("left")}
               <Footer />
             </MobileRightMenuSlider>
-          </ToolBar>
+          </Toolbar>
         </AppBar>
       </Box>
     </>
