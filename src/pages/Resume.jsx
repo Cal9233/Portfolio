@@ -49,10 +49,8 @@ const Resume = () => {
             variant="h5"
             alignItems="center"
             style={{
-              justify: "center",
               color: "#E5DADA",
               width: "60%",
-              alignItems: "center",
               textAlign: "center",
             }}
           >

@@ -15,7 +15,7 @@ import Navbar from "../components/Navbar";
 import project1 from "../image/GotTech.png";
 import project2 from "../image/Corona.jpg";
 import project3 from "../image/WynIt.png";
-import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
+// import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 
 const useStyles = makeStyles({
   mainContainer: {
