@@ -3,6 +3,7 @@ import { makeStyles, withStyles } from "@material-ui/core/styles";
 import { TextField, Typography, Button, Grid, Box } from "@material-ui/core";
 import SendIcon from "@material-ui/icons/Send";
 import Navbar from "../components/Navbar";
+import emailjs from "emailjs-com";
 
 const useStyles = makeStyles((theme) => ({
   form: {
@@ -18,8 +19,8 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     marginTop: "1rem",
-    color: "#ffd300",
-    borderColor: "#ffd300",
+    color: "#E5DADA",
+    borderColor: "#E5DADA",
   },
   aboutMe: {
     top: "50%",
@@ -33,20 +34,20 @@ const useStyles = makeStyles((theme) => ({
 const InputField = withStyles({
   root: {
     "& label.Mui-focused": {
-      color: "#ffd300",
+      color: "#E5DADA",
     },
     "& label": {
-      color: "#ffd300",
+      color: "#E5DADA",
     },
     "& .MuiOutlinedInput-root": {
       "& fieldset": {
-        borderColor: "#ffd300",
+        borderColor: "#E5DADA",
       },
       "&:hover fieldset": {
-        borderColor: "#ffd300",
+        borderColor: "#E5DADA",
       },
       "& .Mui-focused field": {
-        borderColor: "#ffd300",
+        borderColor: "#E5DADA",
       },
     },
   },
@@ -54,57 +55,54 @@ const InputField = withStyles({
 
 const Contact = () => {
   const classes = useStyles();
-
+  function sendEmail(e) {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        `${process.env.REACT_APP_EMAILJS_SERVICE}`,
+        `${process.env.REACT_APP_EMAILJS_TEMPLATE}`,
+        e.target,
+        `${process.env.REACT_APP_EMAILJS_USER}`
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("email sent!");
+        },
+        (error) => {
+          console.log(error.text);
+          alert("something went wrong!");
+        }
+      );
+  }
   return (
-    <Box component="div" style={{ background: "#141000", height: "100vh" }}>
+    <Box component="div" style={{ background: "#840032", height: "100vh" }}>
       <Navbar />
       <Grid container justify="center" className={classes.message}>
         <Box
           component="form"
           className={classes.form}
-          method="POST"
           action="/contact"
           name="contact"
+          onSubmit={sendEmail}
         >
           <Typography
             variant="h2"
             style={{
-              color: "#ffd300",
-              textAlign: "center",
-              textTransform: "uppercase",
-            }}
-          >
-            About me
-          </Typography>
-          <Typography variant="h5" style={{ color: "#ffd300" }}>
-            Cal is a creative and motivated web developer who is ready to roll
-            up his sleeves and solve any problem in front of him. He is a strong
-            communicator and took lead as project manager and full-stack
-            developer on multiple projects. Prior to Wyncode he was working in
-            the medical field as PT intern and holds a BA degree in Gradual
-            Studies from University of Central Florida.
-          </Typography>
-          <br />
-          <br />
-          <br />
-          <br />
-          <Typography
-            variant="h2"
-            style={{
-              color: "#ffd300",
+              color: "#E5DADA",
               textAlign: "center",
               textTransform: "uppercase",
             }}
           >
             Contact me!
           </Typography>
-          <InputField type="hidden" name="form-name" value="contact" />
+          <InputField type="hidden" name="user_name" value="contact" />
           <InputField
             fullWidth={true}
             required
             label="Name"
             variant="outlined"
-            inputProps={{ style: { color: "#ffd300" } }}
+            inputProps={{ style: { color: "#E5DADA" } }}
             margin="dense"
             size="medium"
           />
@@ -112,9 +110,10 @@ const Contact = () => {
           <InputField
             fullWidth={true}
             requred
+            name="user_email"
             label="Email"
             variant="outlined"
-            inputProps={{ style: { color: "#ffd300" } }}
+            inputProps={{ style: { color: "#E5DADA" } }}
             margin="dense"
             size="medium"
           />
@@ -122,9 +121,10 @@ const Contact = () => {
           <InputField
             fullWidth={true}
             required
+            name="company_name"
             label="Company Name"
             variant="outlined"
-            inputProps={{ style: { color: "#ffd300" } }}
+            inputProps={{ style: { color: "#E5DADA" } }}
             margin="dense"
             size="medium"
           />
@@ -132,9 +132,10 @@ const Contact = () => {
           <InputField
             fullWidth={true}
             required
+            name="message"
             label="Message"
             variant="outlined"
-            inputProps={{ style: { color: "#ffd300" } }}
+            inputProps={{ style: { color: "#E5DADA" } }}
             margin="dense"
             size="medium"
             multiline
@@ -147,6 +148,7 @@ const Contact = () => {
             variant="outlined"
             fullWidth={true}
             endIcon={<SendIcon />}
+            type="submit"
           >
             Contact Me
           </Button>
