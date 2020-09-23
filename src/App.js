@@ -6,6 +6,7 @@ import Home from "./pages/index";
 import Project from "./pages/Project";
 import Contact from "./pages/Contact";
 import Resume from "./pages/Resume";
+require("dotenv").config();
 
 function App() {
   return (

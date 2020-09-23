@@ -14,13 +14,13 @@ const useStyles = makeStyles((theme) => ({
     top: theme.spacing(10),
   },
   title: {
-    color: "#FFD300",
+    color: "#E5DADA",
     position: "relative",
     minHeight: "150px",
     top: 100,
   },
   subtitles: {
-    color: "#FFD300",
+    color: "#E5DADA",
     marginBottom: "3rem",
   },
   typedContainer: {

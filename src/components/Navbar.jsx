@@ -12,6 +12,7 @@ import {
   Divider,
   List,
   Typography,
+  Fab,
   Box,
   Toolbar,
 } from "@material-ui/core";
@@ -23,7 +24,7 @@ import Footer from "./Footer";
 //CSS
 const useStyles = makeStyles((theme) => ({
   menuSliderContainer: {
-    background: "#222",
+    background: "#002642",
     height: "100%",
     width: "100%",
   },
@@ -34,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     height: theme.spacing(10),
   },
   listItem: {
-    color: "#FFD300",
+    color: "#E5DADA",
   },
 }));
 
@@ -98,12 +99,14 @@ const Navbar = () => {
   return (
     <>
       <Box component="nav">
-        <AppBar position="static" style={{ background: "#222" }}>
+        <AppBar position="static" style={{ background: "#E59500" }}>
           <Toolbar>
-            <IconButton onClick={toggleSlider("left", true)}>
-              <CodeIcon style={{ background: "#FFD300" }} />
-            </IconButton>
-            <Typography variant="h5" style={{ color: "#FFD300" }}>
+            <Fab variant="extended">
+              <IconButton onClick={toggleSlider("left", true)}>
+                <CodeIcon style={{ background: "#E5DADA" }} />
+              </IconButton>
+            </Fab>
+            <Typography variant="h5" style={{ color: "#E5DADA" }}>
               Portfolio
             </Typography>
             <MobileRightMenuSlider
