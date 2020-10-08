@@ -15,11 +15,11 @@ import Navbar from "../components/Navbar";
 import project1 from "../image/GotTech.png";
 import project2 from "../image/Corona.jpg";
 import project3 from "../image/WynIt.png";
-// import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
+import logo from "../image/logo.png";
 
 const useStyles = makeStyles({
   mainContainer: {
-    background: "#E5DADA",
+    background: "#002642",
     height: "100vh",
     margin: 0,
     padding: 0,
@@ -29,6 +29,12 @@ const useStyles = makeStyles({
     maxHeight: 445,
     margin: "5rem auto",
     background: "#040F0F",
+  },
+  text: {
+    // display: "none",
+    color: "#E5DADA",
+    verticalAlign: "middle",
+    transfrom: "translate(20%, 20%)",
   },
 });
 
@@ -83,6 +89,20 @@ const Portfolio = () => {
             </CardActions>
           </Card>
         </Grid>
+        <div className={classes.text}>
+          <h3> Technologies Used </h3>
+          <ul>
+            <li>React</li>
+            <li>Axios</li>
+            <li>Github</li>
+            <li>HTML/CSS</li>
+            <li>Heroku</li>
+            <li>Bootstrap</li>
+            <li>Codepen</li>
+            <li>Mockflow</li>
+            <li>React Router Dom</li>
+          </ul>
+        </div>
         <Grid item xs={12} sm={8} md={6}>
           <Card className={classes.cardContainer}>
             <CardActionArea>
@@ -132,6 +152,18 @@ const Portfolio = () => {
             </CardActions>
           </Card>
         </Grid>
+        <div className={classes.text}>
+          <h3> Technologies Used </h3>
+          <ul>
+            <li>React</li>
+            <li>Axios</li>
+            <li>Github</li>
+            <li>HTML/CSS</li>
+            <li>Heroku</li>
+            <li>Material-UI</li>
+            <li>Chart-js</li>
+          </ul>
+        </div>
         <Grid item xs={12} sm={8} md={6}>
           <Card className={classes.cardContainer}>
             <CardActionArea>
@@ -181,17 +213,38 @@ const Portfolio = () => {
             </CardActions>
           </Card>
         </Grid>
+        <div className={classes.text}>
+          <h3> Technologies Used </h3>
+          <ul>
+            <li>MERN</li>
+            <li>Chart.js</li>
+            <li>Github</li>
+            <li>HTML/CSS</li>
+            <li>Heroku</li>
+            <li>Bootstrap</li>
+            <li>framer-motion</li>
+            <li>Mockflow</li>
+            <li>sendgrid/mail</li>
+            <li>Passport</li>
+            <li>fullcalender</li>
+          </ul>
+        </div>
         <Grid item xs={12} sm={8} md={6}>
           <Card className={classes.cardContainer}>
             <CardActionArea>
-              <CardMedia component="img" alt="Project 4" height="140" />
+              <CardMedia
+                component="img"
+                alt="Project 4"
+                height="140"
+                image={logo}
+              />
               <CardContent>
                 <Typography
                   gutterBottom
                   variant="h5"
                   style={{ color: "#FCFFFC" }}
                 >
-                  Scrumy
+                  GenThrust
                 </Typography>
                 <Typography
                   gutterBottom
@@ -200,8 +253,7 @@ const Portfolio = () => {
                   component="p"
                   style={{ color: "#FCFFFC" }}
                 >
-                  Possible Web App created for team management allowing access
-                  to versitile
+                  Client website currently in development
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -215,6 +267,18 @@ const Portfolio = () => {
             </CardActions>
           </Card>
         </Grid>
+        <div className={classes.text}>
+          <h3> Technologies Used </h3>
+          <ul>
+            <li>React</li>
+            <li>iframe</li>
+            <li>Github</li>
+            <li>HTML/CSS</li>
+            <li>Heroku</li>
+            <li>Bootstrap</li>
+            <li>Email.js</li>
+          </ul>
+        </div>
       </Grid>
     </Box>
   );
