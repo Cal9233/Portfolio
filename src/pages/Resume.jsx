@@ -5,17 +5,24 @@ import Navbar from "../components/Navbar";
 import resume from "../assets/Resume.pdf";
 
 const useStyles = makeStyles({
-  // body: {
-  //   top: "50%",
-  //   left: "50%",
-  //   transform: "translate(-50%, -50%)",
-  //   position: "absolute",
-  //   alignItems: "center",
-  // },
+  body: {
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    position: "absolute",
+    alignItems: "center",
+  },
+  summary: {
+    top: "50%",
+    left: "90%",
+    marginLeft: "18%",
+  },
   button: {
     marginBottom: "1rem",
     color: "#E59500",
     borderColor: "#E59500",
+    top: "50%",
+    left: "40%",
   },
 });
 
@@ -25,7 +32,12 @@ const Resume = () => {
     <>
       <Box component="div" style={{ background: "#141000", height: "100vh" }}>
         <Navbar />
-        <Container alignItems="center" container justify="center">
+        <Container
+          className={classes.body}
+          alignItems="center"
+          container
+          justify="center"
+        >
           <br />
           <br />
           <br />
@@ -48,6 +60,7 @@ const Resume = () => {
           <Typography
             variant="h5"
             alignItems="center"
+            className={classes.summary}
             style={{
               color: "#E5DADA",
               width: "60%",
