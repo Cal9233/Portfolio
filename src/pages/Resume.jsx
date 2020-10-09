@@ -15,14 +15,14 @@ const useStyles = makeStyles({
   summary: {
     top: "50%",
     left: "90%",
-    marginLeft: "18%",
+    marginLeft: "20%",
   },
   button: {
     marginBottom: "1rem",
     color: "#E59500",
     borderColor: "#E59500",
     top: "50%",
-    left: "40%",
+    left: "42%",
   },
 });
 

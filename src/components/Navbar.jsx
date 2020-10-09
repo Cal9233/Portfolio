@@ -21,7 +21,6 @@ import CodeIcon from "@material-ui/icons/Code";
 import me from "../image/me.png";
 import Footer from "./Footer";
 
-//CSS
 const useStyles = makeStyles((theme) => ({
   menuSliderContainer: {
     background: "#002642",
@@ -106,7 +105,10 @@ const Navbar = () => {
                 <CodeIcon style={{ background: "#E5DADA" }} />
               </IconButton>
             </Fab>
-            <Typography variant="h5" style={{ color: "#E5DADA" }}>
+            <Typography
+              variant="h5"
+              style={{ color: "#E5DADA", marginLeft: "1%" }}
+            >
               Portfolio
             </Typography>
             <MobileRightMenuSlider
