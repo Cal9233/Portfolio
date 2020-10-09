@@ -20,7 +20,7 @@ import logo from "../image/logo.png";
 const useStyles = makeStyles({
   mainContainer: {
     background: "#002642",
-    height: "100vh",
+    height: "100%",
     margin: 0,
     padding: 0,
   },
@@ -31,7 +31,6 @@ const useStyles = makeStyles({
     background: "#040F0F",
   },
   text: {
-    // display: "none",
     color: "#E5DADA",
     verticalAlign: "middle",
     transfrom: "translate(20%, 20%)",
@@ -89,20 +88,41 @@ const Portfolio = () => {
             </CardActions>
           </Card>
         </Grid>
-        <div className={classes.text}>
-          <h3> Technologies Used </h3>
-          <ul>
-            <li>React</li>
-            <li>Axios</li>
-            <li>Github</li>
-            <li>HTML/CSS</li>
-            <li>Heroku</li>
-            <li>Bootstrap</li>
-            <li>Codepen</li>
-            <li>Mockflow</li>
-            <li>React Router Dom</li>
-          </ul>
-        </div>
+        <Grid item xs={12} sm={8} md={6}>
+          <Card className={classes.cardContainer}>
+            <CardActionArea>
+              <CardMedia height="140" />
+              <CardContent>
+                <Typography
+                  gutterBottom
+                  variant="h5"
+                  style={{ color: "#FCFFFC" }}
+                >
+                  Technologies Used
+                </Typography>
+                <Typography
+                  gutterBottom
+                  variant="body2"
+                  color="textSecondary"
+                  component="p"
+                  style={{ color: "#FCFFFC" }}
+                >
+                  <ul>
+                    <li>React</li>
+                    <li>Axios</li>
+                    <li>Github</li>
+                    <li>HTML/CSS</li>
+                    <li>Heroku</li>
+                    <li>Bootstrap</li>
+                    <li>Codepen</li>
+                    <li>Mockflow</li>
+                    <li>React Router Dom</li>
+                  </ul>
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        </Grid>
         <Grid item xs={12} sm={8} md={6}>
           <Card className={classes.cardContainer}>
             <CardActionArea>
@@ -152,18 +172,39 @@ const Portfolio = () => {
             </CardActions>
           </Card>
         </Grid>
-        <div className={classes.text}>
-          <h3> Technologies Used </h3>
-          <ul>
-            <li>React</li>
-            <li>Axios</li>
-            <li>Github</li>
-            <li>HTML/CSS</li>
-            <li>Heroku</li>
-            <li>Material-UI</li>
-            <li>Chart-js</li>
-          </ul>
-        </div>
+        <Grid item xs={12} sm={8} md={6}>
+          <Card className={classes.cardContainer}>
+            <CardActionArea>
+              <CardMedia height="140" />
+              <CardContent>
+                <Typography
+                  gutterBottom
+                  variant="h5"
+                  style={{ color: "#FCFFFC" }}
+                >
+                  Technologies Used
+                </Typography>
+                <Typography
+                  gutterBottom
+                  variant="body2"
+                  color="textSecondary"
+                  component="p"
+                  style={{ color: "#FCFFFC" }}
+                >
+                  <ul>
+                    <li>React</li>
+                    <li>Axios</li>
+                    <li>Github</li>
+                    <li>HTML/CSS</li>
+                    <li>Heroku</li>
+                    <li>Material-UI</li>
+                    <li>Chart-js</li>
+                  </ul>
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        </Grid>
         <Grid item xs={12} sm={8} md={6}>
           <Card className={classes.cardContainer}>
             <CardActionArea>
@@ -213,22 +254,43 @@ const Portfolio = () => {
             </CardActions>
           </Card>
         </Grid>
-        <div className={classes.text}>
-          <h3> Technologies Used </h3>
-          <ul>
-            <li>MERN</li>
-            <li>Chart.js</li>
-            <li>Github</li>
-            <li>HTML/CSS</li>
-            <li>Heroku</li>
-            <li>Bootstrap</li>
-            <li>framer-motion</li>
-            <li>Mockflow</li>
-            <li>sendgrid/mail</li>
-            <li>Passport</li>
-            <li>fullcalender</li>
-          </ul>
-        </div>
+        <Grid item xs={12} sm={8} md={6}>
+          <Card className={classes.cardContainer}>
+            <CardActionArea>
+              <CardMedia height="140" />
+              <CardContent>
+                <Typography
+                  gutterBottom
+                  variant="h5"
+                  style={{ color: "#FCFFFC" }}
+                >
+                  Technologies Used
+                </Typography>
+                <Typography
+                  gutterBottom
+                  variant="body2"
+                  color="textSecondary"
+                  component="p"
+                  style={{ color: "#FCFFFC" }}
+                >
+                  <ul>
+                    <li>MERN</li>
+                    <li>Chart.js</li>
+                    <li>Github</li>
+                    <li>HTML/CSS</li>
+                    <li>Heroku</li>
+                    <li>Bootstrap</li>
+                    <li>framer-motion</li>
+                    <li>Mockflow</li>
+                    <li>sendgrid/mail</li>
+                    <li>Passport</li>
+                    <li>fullcalender</li>
+                  </ul>
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        </Grid>
         <Grid item xs={12} sm={8} md={6}>
           <Card className={classes.cardContainer}>
             <CardActionArea>
@@ -267,18 +329,39 @@ const Portfolio = () => {
             </CardActions>
           </Card>
         </Grid>
-        <div className={classes.text}>
-          <h3> Technologies Used </h3>
-          <ul>
-            <li>React</li>
-            <li>iframe</li>
-            <li>Github</li>
-            <li>HTML/CSS</li>
-            <li>Heroku</li>
-            <li>Bootstrap</li>
-            <li>Email.js</li>
-          </ul>
-        </div>
+        <Grid item xs={12} sm={8} md={6}>
+          <Card className={classes.cardContainer}>
+            <CardActionArea>
+              <CardMedia height="140" />
+              <CardContent>
+                <Typography
+                  gutterBottom
+                  variant="h5"
+                  style={{ color: "#FCFFFC" }}
+                >
+                  Technologies Used
+                </Typography>
+                <Typography
+                  gutterBottom
+                  variant="body2"
+                  color="textSecondary"
+                  component="p"
+                  style={{ color: "#FCFFFC" }}
+                >
+                  <ul>
+                    <li>React</li>
+                    <li>iframe</li>
+                    <li>Github</li>
+                    <li>HTML/CSS</li>
+                    <li>Heroku</li>
+                    <li>Bootstrap</li>
+                    <li>Email.js</li>
+                  </ul>
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        </Grid>
       </Grid>
     </Box>
   );
