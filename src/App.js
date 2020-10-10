@@ -5,7 +5,6 @@ import "./App.css";
 import Home from "./pages/index";
 import Project from "./pages/Project";
 import Contact from "./pages/Contact";
-import Resume from "./pages/Resume";
 require("dotenv").config();
 
 function App() {
@@ -15,7 +14,6 @@ function App() {
       <Route exact path="/" component={Home} />
       <Route path="/project" component={Project} />
       <Route path="/contact" component={Contact} />
-      <Route path="/resume" component={Resume} />
     </>
   );
 }

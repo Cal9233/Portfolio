@@ -16,7 +16,7 @@ import {
   Box,
   Toolbar,
 } from "@material-ui/core";
-import { AssignmentInd, Home, Apps, ContactMail } from "@material-ui/icons";
+import { Home, Apps, ContactMail } from "@material-ui/icons";
 import CodeIcon from "@material-ui/icons/Code";
 import me from "../image/me.png";
 import Footer from "./Footer";
@@ -46,11 +46,6 @@ const menuIcons = [
     listIcon: <Home />,
     listText: "Home",
     listPath: "/",
-  },
-  {
-    listIcon: <AssignmentInd />,
-    listText: "Resume",
-    listPath: "/resume",
   },
   {
     listIcon: <Apps />,
