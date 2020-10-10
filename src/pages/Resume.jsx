@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Typography, Container, Fab } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Navbar from "../components/Navbar";
 import resume from "../assets/Resume.pdf";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const useStyles = makeStyles({
   body: {
-    top: "50%",
-    left: "50%",
+    top: "20%",
+    left: "15%",
     transform: "translate(-50%, -50%)",
     position: "absolute",
     alignItems: "center",
@@ -27,6 +29,10 @@ const useStyles = makeStyles({
 });
 
 const Resume = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   const classes = useStyles();
   return (
     <>
@@ -37,6 +43,7 @@ const Resume = () => {
           alignItems="center"
           container
           justify="center"
+          data-aos="zoom-in-up"
         >
           <br />
           <br />

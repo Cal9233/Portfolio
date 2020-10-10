@@ -36,6 +36,9 @@ const useStyles = makeStyles((theme) => ({
   listItem: {
     color: "#E5DADA",
   },
+  button: {
+    borderRadius: "50px",
+  },
 }));
 
 const menuIcons = [
@@ -100,8 +103,12 @@ const Navbar = () => {
       <Box component="nav">
         <AppBar position="static" style={{ background: "#E59500" }}>
           <Toolbar>
-            <Fab variant="extended">
-              <IconButton onClick={toggleSlider("left", true)}>
+            <Fab
+              variant="extended"
+              className={classes.button}
+              onClick={toggleSlider("left", true)}
+            >
+              <IconButton>
                 <CodeIcon style={{ background: "#E5DADA" }} />
               </IconButton>
             </Fab>

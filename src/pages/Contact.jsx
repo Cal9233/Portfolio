@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import { TextField, Typography, Button, Grid, Box } from "@material-ui/core";
 import SendIcon from "@material-ui/icons/Send";
 import Navbar from "../components/Navbar";
 import emailjs from "emailjs-com";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const useStyles = makeStyles((theme) => ({
   form: {
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
+    top: "30%",
+    left: "38%",
     position: "absolute",
   },
   message: {
@@ -54,6 +55,10 @@ const InputField = withStyles({
 })(TextField);
 
 const Contact = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   const classes = useStyles();
   function sendEmail(e) {
     e.preventDefault();
@@ -76,85 +81,88 @@ const Contact = () => {
       );
   }
   return (
-    <Box component="div" style={{ background: "#840032", height: "100vh" }}>
-      <Navbar />
-      <Grid container justify="center" className={classes.message}>
-        <Box
-          component="form"
-          className={classes.form}
-          action="/contact"
-          name="contact"
-          onSubmit={sendEmail}
-        >
-          <Typography
-            variant="h2"
-            style={{
-              color: "#E5DADA",
-              textAlign: "center",
-              textTransform: "uppercase",
-            }}
+    <>
+      <Box component="div" style={{ background: "#840032", height: "100vh" }}>
+        <Navbar />
+        <Grid container justify="center" className={classes.message}>
+          <Box
+            component="form"
+            className={classes.form}
+            action="/contact"
+            name="contact"
+            onSubmit={sendEmail}
+            data-aos="fade-up"
           >
-            Contact me!
-          </Typography>
-          <InputField type="hidden" name="user_name" value="contact" />
-          <InputField
-            fullWidth={true}
-            required
-            label="Name"
-            variant="outlined"
-            inputProps={{ style: { color: "#E5DADA" } }}
-            margin="dense"
-            size="medium"
-          />
-          <br />
-          <InputField
-            fullWidth={true}
-            requred
-            name="user_email"
-            label="Email"
-            variant="outlined"
-            inputProps={{ style: { color: "#E5DADA" } }}
-            margin="dense"
-            size="medium"
-          />
-          <br />
-          <InputField
-            fullWidth={true}
-            required
-            name="company_name"
-            label="Company Name"
-            variant="outlined"
-            inputProps={{ style: { color: "#E5DADA" } }}
-            margin="dense"
-            size="medium"
-          />
-          <br />
-          <InputField
-            fullWidth={true}
-            required
-            name="message"
-            label="Message"
-            variant="outlined"
-            inputProps={{ style: { color: "#E5DADA" } }}
-            margin="dense"
-            size="medium"
-            multiline
-            rows={8}
-            rowsMax={10}
-          />
-          <br />
-          <Button
-            className={classes.button}
-            variant="outlined"
-            fullWidth={true}
-            endIcon={<SendIcon />}
-            type="submit"
-          >
-            Contact Me
-          </Button>
-        </Box>
-      </Grid>
-    </Box>
+            <Typography
+              variant="h2"
+              style={{
+                color: "#E5DADA",
+                textAlign: "center",
+                textTransform: "uppercase",
+              }}
+            >
+              Contact me!
+            </Typography>
+            <InputField type="hidden" name="user_name" value="contact" />
+            <InputField
+              fullWidth={true}
+              required
+              label="Name"
+              variant="outlined"
+              inputProps={{ style: { color: "#E5DADA" } }}
+              margin="dense"
+              size="medium"
+            />
+            <br />
+            <InputField
+              fullWidth={true}
+              requred
+              name="user_email"
+              label="Email"
+              variant="outlined"
+              inputProps={{ style: { color: "#E5DADA" } }}
+              margin="dense"
+              size="medium"
+            />
+            <br />
+            <InputField
+              fullWidth={true}
+              required
+              name="company_name"
+              label="Company Name"
+              variant="outlined"
+              inputProps={{ style: { color: "#E5DADA" } }}
+              margin="dense"
+              size="medium"
+            />
+            <br />
+            <InputField
+              fullWidth={true}
+              required
+              name="message"
+              label="Message"
+              variant="outlined"
+              inputProps={{ style: { color: "#E5DADA" } }}
+              margin="dense"
+              size="medium"
+              multiline
+              rows={8}
+              rowsMax={10}
+            />
+            <br />
+            <Button
+              className={classes.button}
+              variant="outlined"
+              fullWidth={true}
+              endIcon={<SendIcon />}
+              type="submit"
+            >
+              Contact Me
+            </Button>
+          </Box>
+        </Grid>
+      </Box>
+    </>
   );
 };
 

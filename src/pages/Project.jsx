@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Box,
   Grid,
@@ -16,6 +16,8 @@ import project1 from "../image/GotTech.png";
 import project2 from "../image/Corona.jpg";
 import project3 from "../image/WynIt.png";
 import logo from "../image/logo.png";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const useStyles = makeStyles({
   mainContainer: {
@@ -38,13 +40,17 @@ const useStyles = makeStyles({
 });
 
 const Portfolio = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   const classes = useStyles();
   return (
     <Box component="div" className={classes.mainContainer}>
       <Navbar />
       <Grid container justify="center">
         <Grid item xs={12} sm={8} md={6}>
-          <Card className={classes.cardContainer}>
+          <Card className={classes.cardContainer} data-aos="flip-left">
             <CardActionArea>
               <CardMedia
                 component="img"
@@ -89,7 +95,7 @@ const Portfolio = () => {
           </Card>
         </Grid>
         <Grid item xs={12} sm={8} md={6}>
-          <Card className={classes.cardContainer}>
+          <Card className={classes.cardContainer} data-aos="flip-right">
             <CardActionArea>
               <CardMedia height="140" />
               <CardContent>
@@ -124,7 +130,7 @@ const Portfolio = () => {
           </Card>
         </Grid>
         <Grid item xs={12} sm={8} md={6}>
-          <Card className={classes.cardContainer}>
+          <Card className={classes.cardContainer} data-aos="flip-left">
             <CardActionArea>
               <CardMedia
                 component="img"
@@ -173,7 +179,7 @@ const Portfolio = () => {
           </Card>
         </Grid>
         <Grid item xs={12} sm={8} md={6}>
-          <Card className={classes.cardContainer}>
+          <Card className={classes.cardContainer} data-aos="flip-right">
             <CardActionArea>
               <CardMedia height="140" />
               <CardContent>
@@ -206,7 +212,7 @@ const Portfolio = () => {
           </Card>
         </Grid>
         <Grid item xs={12} sm={8} md={6}>
-          <Card className={classes.cardContainer}>
+          <Card className={classes.cardContainer} data-aos="flip-left">
             <CardActionArea>
               <CardMedia
                 component="img"
@@ -255,7 +261,7 @@ const Portfolio = () => {
           </Card>
         </Grid>
         <Grid item xs={12} sm={8} md={6}>
-          <Card className={classes.cardContainer}>
+          <Card className={classes.cardContainer} data-aos="flip-right">
             <CardActionArea>
               <CardMedia height="140" />
               <CardContent>
@@ -292,7 +298,7 @@ const Portfolio = () => {
           </Card>
         </Grid>
         <Grid item xs={12} sm={8} md={6}>
-          <Card className={classes.cardContainer}>
+          <Card className={classes.cardContainer} data-aos="flip-left">
             <CardActionArea>
               <CardMedia
                 component="img"
@@ -330,7 +336,7 @@ const Portfolio = () => {
           </Card>
         </Grid>
         <Grid item xs={12} sm={8} md={6}>
-          <Card className={classes.cardContainer}>
+          <Card className={classes.cardContainer} data-aos="flip-right">
             <CardActionArea>
               <CardMedia height="140" />
               <CardContent>
