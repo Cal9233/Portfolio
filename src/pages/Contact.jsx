@@ -4,13 +4,14 @@ import { TextField, Typography, Button, Grid, Box } from "@material-ui/core";
 import SendIcon from "@material-ui/icons/Send";
 import Navbar from "../components/Navbar";
 import emailjs from "emailjs-com";
+import Resume from "../components/Resume";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
 const useStyles = makeStyles((theme) => ({
   form: {
-    top: "30%",
-    left: "38%",
+    top: "25%",
+    right: "18%",
     position: "absolute",
   },
   message: {
@@ -84,6 +85,7 @@ const Contact = () => {
     <>
       <Box component="div" style={{ background: "#840032", height: "100vh" }}>
         <Navbar />
+        <Resume />
         <Grid container justify="center" className={classes.message}>
           <Box
             component="form"
@@ -91,7 +93,7 @@ const Contact = () => {
             action="/contact"
             name="contact"
             onSubmit={sendEmail}
-            data-aos="fade-up"
+            data-aos="fade-left"
           >
             <Typography
               variant="h2"

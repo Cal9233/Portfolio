@@ -122,7 +122,6 @@ const Portfolio = () => {
                     <li>Bootstrap</li>
                     <li>Codepen</li>
                     <li>Mockflow</li>
-                    <li>React Router Dom</li>
                   </ul>
                 </Typography>
               </CardContent>
@@ -281,6 +280,7 @@ const Portfolio = () => {
                 >
                   <ul>
                     <li>MERN</li>
+                    <li>Axios</li>
                     <li>Chart.js</li>
                     <li>Github</li>
                     <li>HTML/CSS</li>

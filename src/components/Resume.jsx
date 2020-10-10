@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { Box, Typography, Container, Fab } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import Navbar from "../components/Navbar";
 import resume from "../assets/Resume.pdf";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -9,7 +8,7 @@ import "aos/dist/aos.css";
 const useStyles = makeStyles({
   body: {
     top: "20%",
-    left: "15%",
+    right: "35%",
     transform: "translate(-50%, -50%)",
     position: "absolute",
     alignItems: "center",
@@ -36,14 +35,13 @@ const Resume = () => {
   const classes = useStyles();
   return (
     <>
-      <Box component="div" style={{ background: "#141000", height: "100vh" }}>
-        <Navbar />
+      <Box component="div">
         <Container
           className={classes.body}
           alignItems="center"
           container
           justify="center"
-          data-aos="zoom-in-up"
+          data-aos="fade-right"
         >
           <br />
           <br />
