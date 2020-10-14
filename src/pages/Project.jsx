@@ -88,7 +88,12 @@ const Portfolio = () => {
               >
                 Github
               </Button>
-              <Button size="small" color="primary" style={{ color: "#FCFFFC" }}>
+              <Button
+                size="small"
+                color="primary"
+                style={{ color: "#FCFFFC" }}
+                href="https://midterm-project-c38.herokuapp.com/"
+              >
                 Live Demo
               </Button>
             </CardActions>
@@ -326,7 +331,12 @@ const Portfolio = () => {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button size="small" color="primary" style={{ color: "#FCFFFC" }}>
+              <Button
+                size="small"
+                color="primary"
+                style={{ color: "#FCFFFC" }}
+                href="https://github.com/Cal9233/gentrust"
+              >
                 Github
               </Button>
               <Button size="small" color="primary" style={{ color: "#FCFFFC" }}>
