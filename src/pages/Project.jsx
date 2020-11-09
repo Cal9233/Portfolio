@@ -16,6 +16,7 @@ import project1 from "../image/GotTech.png";
 import project2 from "../image/Corona.jpg";
 import project3 from "../image/WynIt.png";
 import logo from "../image/logo.png";
+import H2H from "../image/H2H.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -88,7 +89,12 @@ const Portfolio = () => {
               >
                 Github
               </Button>
-              <Button size="small" color="primary" style={{ color: "#FCFFFC" }}>
+              <Button
+                size="small"
+                color="primary"
+                style={{ color: "#FCFFFC" }}
+                href="https://midterm-project-c38.herokuapp.com/"
+              >
                 Live Demo
               </Button>
             </CardActions>
@@ -326,7 +332,12 @@ const Portfolio = () => {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button size="small" color="primary" style={{ color: "#FCFFFC" }}>
+              <Button
+                size="small"
+                color="primary"
+                style={{ color: "#FCFFFC" }}
+                href="https://github.com/Cal9233/gentrust"
+              >
                 Github
               </Button>
               <Button size="small" color="primary" style={{ color: "#FCFFFC" }}>
@@ -362,6 +373,91 @@ const Portfolio = () => {
                     <li>Heroku</li>
                     <li>Bootstrap</li>
                     <li>Email.js</li>
+                  </ul>
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={8} md={6}>
+          <Card className={classes.cardContainer} data-aos="flip-left">
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                alt="Heart2Heart"
+                height="140"
+                image={H2H}
+              />
+              <CardContent>
+                <Typography
+                  gutterBottom
+                  variant="h5"
+                  style={{ color: "#FCFFFC" }}
+                >
+                  Heart2Heart
+                </Typography>
+                <Typography
+                  gutterBottom
+                  variant="body2"
+                  color="textSecondary"
+                  component="p"
+                  style={{ color: "#FCFFFC" }}
+                >
+                  A MERN stack web application coded for the Palm Beach Tech
+                  2020 Hackathon and Gift for Life to share information and
+                  personalize the bone marrow donation process
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button
+                size="small"
+                color="primary"
+                style={{ color: "#FCFFFC" }}
+                href="https://github.com/Cal9233/heart2heart"
+              >
+                Github
+              </Button>
+              <Button
+                size="small"
+                color="primary"
+                style={{ color: "#FCFFFC" }}
+                href="https://heart-to-heart.herokuapp.com/"
+              >
+                Live Demo
+              </Button>
+            </CardActions>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={8} md={6}>
+          <Card className={classes.cardContainer} data-aos="flip-right">
+            <CardActionArea>
+              <CardMedia height="140" />
+              <CardContent>
+                <Typography
+                  gutterBottom
+                  variant="h5"
+                  style={{ color: "#FCFFFC" }}
+                >
+                  Technologies Used
+                </Typography>
+                <Typography
+                  gutterBottom
+                  variant="body2"
+                  color="textSecondary"
+                  component="p"
+                  style={{ color: "#FCFFFC" }}
+                >
+                  <ul>
+                    <li>React</li>
+                    <li>Axios</li>
+                    <li>Github</li>
+                    <li>HTML/CSS</li>
+                    <li>Heroku</li>
+                    <li>Bootstrap</li>
+                    <li>SendGrid</li>
+                    <li>Cloudinary</li>
+                    <li>React Countdown Circle Time</li>
                   </ul>
                 </Typography>
               </CardContent>
